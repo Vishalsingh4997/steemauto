@@ -357,6 +357,7 @@ If you don't want to follow a trail you can also: <a style="margin:5px;" class="
 					if($y == 1){
 						$result = $conn->query("SELECT `trailer` FROM `followers` WHERE `follower` = '$name'");
 						$r = 0;
+						
 						foreach($result as $y){
 							foreach($y as $y){
 								$uze[$r]=$y;
@@ -386,6 +387,7 @@ If you don't want to follow a trail you can also: <a style="margin:5px;" class="
 							$result = $conn->query("SELECT * FROM `trailers` ORDER BY `trailers`.`followers` DESC LIMIT $mysqlpage,20");
 								foreach($result as $x){
 									$s = 0;
+									global $uze=0;
 									if($rrr = 1){
 										foreach($uze as $u){
 											if($u == $x['user']){
